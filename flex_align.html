@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Alignment</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #container {
+        background: #555;
+        display: flex;
+        flex-wrap: wrap;
+
+        /* Align items horizontal */
+
+        /* ALL ARE justify-content OPTIONS */
+        justify-content: space-evenly;
+        /*  flex-start //default is flex-start
+            flex-end
+            center
+            space-around
+            space-between
+            space-evenly
+        */
+
+        height: 600px;
+
+        /********* Align items vertical (Must be height) **************/
+
+        /* ALL ARE align-items OPTIONS */
+        align-items: baseline;
+        /*  stretch //default is stretch
+            flex-start
+            flex-end
+            center
+            baseline
+        */
+
+        /* ALL ARE align-content OPTIONS */
+        /* align-content: space-between; */
+        /*  space-around  //maybe this is deafult
+            flex-start
+            flex-end
+            center
+            space-between 
+        */
+
+        /* Align items vertical where extra space */
+      }
+
+      /* Order in flexbox */
+      .item-1 {
+        order: 3;
+      }
+
+      .item-2 {
+        /* Align  single item vertical */
+
+        /* ALL ARE align-self OPTIONS */
+        align-self: center;
+        /*  flex-start
+            flex-end
+            center
+            baseline
+            stretch
+        */
+
+        order: 2;
+      }
+
+      .item-3 {
+        order: 1;
+      }
+
+      .item {
+        background: #f4f4f4;
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 1rem;
+        margin: 0.5rem;
+        /* width: 300px; */
+        /* Same as width */
+        flex-basis: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="item item-1"><h3>Item 1</h3></div>
+      <div class="item item-2"><h3>Item 2</h3></div>
+      <div class="item item-3"><h3>Item 3</h3></div>
+    </div>
+  </body>
+</html>
